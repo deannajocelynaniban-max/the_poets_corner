@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poems & Quotes Corner</title>
+
+    <style>
+
+        body{
+            font-family: Georgia, serif;
+            background-color:#E6E6FA;
+            text-align:center;
+            padding:30px;
+            margin:0;
+        }
+
+        h1{
+            color:#6a5acd;
+        }
+
+        .main-btn{
+            background-color:#b19cd9;
+            color:white;
+            border:none;
+            border-radius:20px;
+            padding:15px 30px;
+            margin:10px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .main-btn:hover{
+            background-color:#9c83d3;
+        }
+
+        .section{
+            display:none;
+            background:white;
+            max-width:900px;
+            margin:20px auto;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .entry-btn{
+            display:block;
+            width:90%;
+            margin:10px auto;
+            padding:12px;
+            background-color:#d8c9f0;
+            border:none;
+            border-radius:15px;
+            cursor:pointer;
+            font-size:15px;
+        }
+
+        .entry-btn:hover{
+            background-color:#c5b3e6;
+        }
+
+        .content-display{
+            margin:20px auto;
+            padding:35px;
+            background:#f7f4ff;
+            border-radius:15px;
+            text-align:center;
+            max-width:650px;
+        }
+
+        pre{
+            white-space:pre-wrap;
+            text-align:center;
+            font-family:Georgia, serif;
+            font-size:18px;
+            line-height:2;
+            color:#4b3f72;
+            margin:0;
+        }
+
+        .quote{
+            margin-bottom:35px;
+            line-height:1.8;
+        }
+
+        .submit-btn{
+            background-color:#b19cd9;
+            color:white;
+            border:none;
+            border-radius:15px;
+            padding:12px 25px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .submit-btn:hover{
+            background-color:#9c83d3;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h1>ꕤ The Poet's Corner ꕤ</h1>
+
+<button class="main-btn" onclick="showSection('poems')">
+    🌸 Poems
+</button>
+
+<button class="main-btn" onclick="showSection('quotes')">
+    💬 Quotes
+</button>
+
+<button class="main-btn" onclick="showSection('guestbook')">
+    📖 Guestbook
+</button>
+
+<!-- POEMS -->
+
+<div id="poems" class="section">
+
+    <h2>Poem Collection</h2>
+
+    <button class="entry-btn" onclick="showPoem('flames')">
+        Flames • 10/03/2026
+    </button>
+
+    <button class="entry-btn" onclick="showPoem('poetspen')">
+        The Poet's Pen • 08/25/2026
+    </button>
+
+    <button class="entry-btn" onclick="showPoem('closet')">
+        Untitled • 11/24/2023
+    </button>
+
+    <button class="entry-btn" onclick="showPoem('scream')">
+        Untitled • 05/08/2023
+    </button>
+
+    <button class="entry-btn" onclick="showPoem('flower')">
+        Flower • 11/15/2022
+    </button>
+
+    <button class="entry-btn" onclick="showPoem('moon')">
+        Untitled • 11/14/2022
+    </button>
+
+    <div id="poemContent" class="content-display">
+        Select a poem to read.
+    </div>
+
+</div>
+
+<!-- QUOTES -->
+
+<div id="quotes" class="section">
+
+    <h2>💬 Favorite Quotes</h2>
+
+    <div class="content-display">
+
+        <p>
+            These are quotes that I personally love and return to often.
+            Some come from stories that inspired me, while others were written by me.
+        </p>
+
+        <hr>
+
+        <div class="quote">
+            <em>
+                "Life is like a line, slowly drawing a unique picture.
+                How can you admire the beauty of the masterpiece
+                if you stop halfway?"
+            </em>
+            <br>
+            — Xie
+        </div>
+
+        <div class="quote">
+            <em>
+                "Fate will make you relive the same lessons
+                until you choose to react differently.
+                The day we stop walking in circles
+                is the day we discover who we truly are."
+            </em>
+        </div>
+
+        <div class="quote">
+            <em>
+                "Mercy toward your enemies
+                can become cruelty toward yourself."
+            </em>
+        </div>
+
+        <div class="quote">
+            <em>
+                "Even if it's already been decided,
+                even if it's set in stone...
+                I'll smash that future."
+            </em>
+            <br>
+            — My Hero Academia
+        </div>
+
+        <div class="quote">
+            <em>
+                "Tribulations will melt away like spring snow,
+                and happiness will arrive like summer clouds."
+            </em>
+            <br>
+            — Painter of the Night
+        </div>
+
+        <div class="quote">
+            <em>
+                "Sometimes the fire you try to hide
+                becomes the light that helps you find yourself."
+            </em>
+            <br>
+            — Xie
+        </div>
+
+    </div>
+
+</div>
+
+<!-- GUESTBOOK -->
+
+<div id="guestbook" class="section">
+
+    <h2>📖 Visitor's Guestbook</h2>
+
+    <div class="content-display">
+
+        <p>
+            Thank you for visiting Poems & Quotes Corner.
+        </p>
+
+        <p>
+            If you'd like to leave a message,
+            please click the button below.
+        </p>
+
+        <button
+                class="submit-btn"
+                onclick="window.open('https://forms.gle/CXaKatwAKCXfXHHSA','_blank')">
+
+            Sign the Guestbook
+
+        </button>
+
+        <p style="margin-top:20px;">
+            Guestbook entries will be collected through Google Forms
+            and stored in Google Sheets.
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+    function showSection(sectionId){
+
+        let sections = document.querySelectorAll('.section');
+
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function showPoem(poem){
+
+    const poemBox = document.getElementById("poemContent");
+
+    if(poem==="flames"){
+
+    poemBox.innerHTML=`
+
+    <h3>Flames</h3>
+    <p><em>Written: 10/03/2026</em></p>
+
+    <pre>
+    I tried to hide the flame inside,
+    I blew, I fought, yet still it defied.
+    I tried to dim its glow,
+    To keep it where no one would know.
+
+    Yet every move just fed its fire,
+    It rose above, it climbed much higher.
+    It swayed against the strikes I gave,
+    Too wild, too fierce for me to save.
+
+    The flames I once kept out of view,
+    Now shine so bright, it feels so true.
+    Its warmth is real, it sets me free,
+    This fire belongs, it feels like me.
+    </pre>
+
+    `;
+    }
+
+    else if(poem==="poetspen"){
+
+    poemBox.innerHTML=`
+
+    <h3>The Poet's Pen</h3>
+    <p><em>Written: August 25, 2026</em></p>
+
+    <pre>
+    The poet has always been cautious,
+    Lost in a maze of truths and lies,
+    Leaving the pen at every step,
+    Searching for a way out—
+    But every turn is blocked.
+
+    Regret begins to creep in,
+    Realization starts to strike.
+
+    The pen is not just any pen;
+    It is the poet's friend.
+    It remains where it was left,
+    Waiting for its dear poet
+    To pick it up
+    And begin the journey again.
+
+    Once the pen is found,
+    The maze no longer binds.
+    The path clears,
+    The door opens wide.
+
+    For the pen is not just any pen—
+    It is the poet's identity,
+    A hand that shapes the word,
+    A heart that writes with clarity.
+    </pre>
+
+    `;
+    }
+
+    else if(poem==="closet"){
+
+    poemBox.innerHTML=`
+
+    <h3>Untitled</h3>
+    <p><em>Written: 11/24/2023</em></p>
+
+    <pre>
+    I always keep my closet close.
+    Afraid to be seen by others,
+    Afraid to show my true colors.
+
+    I'm so sick of pretending.
+    I wish I was as brave as them.
+    I wish I was 'them'.
+    </pre>
+
+    `;
+    }
+
+    else if(poem==="scream"){
+
+    poemBox.innerHTML=`
+
+    <h3>Untitled</h3>
+    <p><em>Written: 05/08/2023</em></p>
+
+    <pre>
+    I scream
+    but my voice doesn't seem
+    to reach your ear
+    whenever I feel fear.
+
+    I start to tremble.
+    Every move a I make feels predictable.
+    I think now I'm in trouble.
+    Please save me in this battle.
+    </pre>
+
+    `;
+    }
+
+    else if(poem==="flower"){
+
+    poemBox.innerHTML=`
+
+    <h3>Flower</h3>
+    <p><em>Written: 11/15/2022</em></p>
+
+    <pre>
+    Just like a flower
+    When you cut it on its stem
+    Over time it'll dry out
+
+    If i cut myself,
+    Just a few seconds,
+    My soul will travel into its own designated realm
+
+    Pain calms me down,
+    Seeing blood satisfies me,
+    Hurting myself makes me happy.
+
+    I want an endless rest,
+    In a nice white bed.
+    Wearing my favorite dress.
+
+    Just like all flowers
+    They'll start to rise and bloom
+    Facing every weather
+    Until one day they'll give up.
+    </pre>
+
+    `;
+    }
+
+    else if(poem==="moon"){
+
+    poemBox.innerHTML=`
+
+    <h3>Untitled</h3>
+    <p><em>Written: 11/14/2022</em></p>
+
+    <pre>
+    I love the Moon,
+    'cause whenever im looking at it i feel loved like im the most special person in the world.
+
+    I love the stars,
+    'cause they make me feel that im not alone.
+
+    I love the silence at night,
+    cause i feel calm and relaxed.
+
+    I love the Moon,
+    'cause i feel like i don't have to worry because the Moon will protect me and willing to do everything for me.
+
+    I love the stars,
+    'cause i feel like they're giving me the spotlight i wish i have.
+
+    I love the night,
+    'cause this is the time where i can be 'me',
+    that i don't have to pretend,
+    that the moon and stars are willing to listen to me,
+    that they will accept me.
+
+    I hate the sun,
+    'cause it make me feel alone,
+    it make me realize that i don't have a choice.
+
+    That i have to do it on my own,
+    'cause if i don't,
+    I will never be where i wanted to be.
+    </pre>
+
+    `;
+    }
+
+    }
+
+</script>
+
+</body>
+</html>
